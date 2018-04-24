@@ -1,8 +1,8 @@
 
 # Colette Turbeville
-<h2>Technical & Professional Communicator</h2>
-<h3>Documentation</h3>
-<a href="https://colette27.github.io/Docs/api/">JavaDoc</a>
+## Technical & Professional Communicator
+### Documentation
+[ link= "https://colette27.github.io/Docs/api/" ]
 
 OpenXLS Manual
 
