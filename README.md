@@ -2,7 +2,7 @@
 # Colette Turbeville
 ## Technical & Professional Communicator
 ### Documentation
-[JavaDoc] (https://colette27.github.io/Docs/api/)
+[JavaDoc](https://colette27.github.io/Docs/api/)
 
 Installation Manual
 
