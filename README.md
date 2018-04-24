@@ -2,7 +2,9 @@
 # Colette Turbeville
 ## Technical & Professional Communicator
 ### Documentation
-[ link= "https://colette27.github.io/Docs/api/" ]
+[JavaDoc] (https://colette27.github.io/Docs/api/)
+
+Installation Manual
 
 OpenXLS Manual
 
@@ -10,8 +12,8 @@ Quick Start Guide
 
 APIs in Swagger
 
-Whitepapers
+White papers
 
-Feasability Study
+Feasibility Study
 
 Code Samples
