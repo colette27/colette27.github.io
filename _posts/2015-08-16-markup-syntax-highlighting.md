@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Java Spreadsheet User Guide & Manual "
-excerpt: "This section documents the WorkSheetHandle of the API. 
+excerpt: "This section documents the WorkSheetHandle of the API.
 "
 tags:
   - code
@@ -13,9 +13,9 @@ The WorkSheetHandle provides a handle to a worksheet within an XLS file, and inc
 
 [^1]: <http://en.wikipedia.org/wiki/Syntax_highlighting>
 
-### GFM Code Blocks
+### Instantiating the WorksheetHandle
 
-GitHub Flavored Markdown [fenced code blocks](https://help.github.com/articles/creating-and-highlighting-code-blocks/) are supported. To modify styling and highlight colors edit `/_sass/syntax.scss`.
+To gain access to the handle, use the getWorkSheet(String sheetName) method within the WorkBookHandle object:
 
 ```css
 #container {
@@ -63,12 +63,8 @@ Indentation matters. Be sure the indent of the code block aligns with the first 
 1. Do step 1.
 2. Now do this:
 
-   ```ruby
-   def print_hi(name)
-     puts "Hi, #{name}"
-   end
-   print_hi('Tom')
-   #=> prints 'Hi, Tom' to STDOUT.
+   ```Java
+   WorkBook mybook = new WorkBook();
    ```
 
 3. Now you can do this.
