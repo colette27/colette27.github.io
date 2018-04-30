@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Quick Start Guide"
-excerpt: "An Simple quick start guide "
+excerpt: "A Simple quick start guide "
 tags:
   - sample post
   - readability
