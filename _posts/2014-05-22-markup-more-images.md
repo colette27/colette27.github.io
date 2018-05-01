@@ -1,99 +1,51 @@
 ---
 layout: post
-title: "Markup: Another Post with Images"
+title: "ExtenXLS Working With Charts"
 excerpt: "Examples and code for displaying images in posts."
 image: "http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg"
-tags: 
-  - sample post
-  - images
+tags:
+  - Spreadsheet
+  - charts
   - test
 ---
 
-Here are some examples of what a post with images might look like. If you want to display two or three images next to each other responsively use `figure` with the appropriate `class`. Each instance of `figure` is auto-numbered and displayed in the caption.
+## Working With Charts
 
-### Figures (for images or video)
+With ChartHandle, you can add cells to a chart, change a chart’s title, axis labels, and copy charts between other worksheets and workbooks.
 
-#### One Up
+Begin by retrieving a ChartHandle from an existing chart in a worksheet. To retrieve a ChartHandle, use the ChartHandle WorkSheetHandle.getChart(String chartname) method.
 
-<figure>
-	<a href="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_b.jpg"><img src="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg"></a>
-	<figcaption><a href="http://www.flickr.com/photos/80901381@N04/7758832526/" title="Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr">Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr</a>.</figcaption>
-</figure>
-
-Vero laborum commodo occupy. Semiotics voluptate mumblecore pug. Cosby sweater ullamco quinoa ennui assumenda, sapiente occupy delectus lo-fi. Ea fashion axe Marfa cillum aliquip. Retro Bushwick keytar cliche. Before they sold out sustainable gastropub Marfa readymade, ethical Williamsburg skateboard brunch qui consectetur gentrify semiotics. Mustache cillum irony, fingerstache magna pour-over keffiyeh tousled selfies.
-
-#### Two Up
-
-Apply the `half` class like so to display two images side by side that share the same caption.
-
-```html
-<figure class="half">
-    <a href="/images/image-filename-1-large.jpg"><img src="/images/image-filename-1.jpg"></a>
-    <a href="/images/image-filename-2-large.jpg"><img src="/images/image-filename-2.jpg"></a>
-    <figcaption>Caption describing these two images.</figcaption>
-</figure>
+```java
+try{        ChartHandle performancechart = mysheet.getChart('Performance');
+}catch(ChartNotFoundException e){        
+  // oops!
+};
 ```
 
-And you'll get something that looks like this:
+With a ChartHandle, you can add cells to the chart using the ChartHandle.changeSeriesRange(String originalrange, String newrange) method.
 
-<figure class="half">
-	<a href="http://placehold.it/1200x600.JPG"><img src="http://placehold.it/600x300.jpg"></a>
-	<a href="http://placehold.it/1200x600.jpeg"><img src="http://placehold.it/600x300.jpg"></a>
-	<figcaption>Two images.</figcaption>
-</figure>
-
-#### Three Up
-
-Apply the `third` class like so to display three images side by side that share the same caption.
-
-```html
-<figure class="third">
-	<img src="/images/image-filename-1.jpg">
-	<img src="/images/image-filename-2.jpg">
-	<img src="/images/image-filename-3.jpg">
-	<figcaption>Caption describing these three images.</figcaption>
-</figure>
+```java
+if(performancechart.changeSeriesRange('Sheet1!C23:E23', 'Sheet1!C23:G23')){
+System.out.println('Successfully Added Columns F and G to Series Range');
+}
 ```
 
-And you'll get something that looks like this:
+To change the chart title, use the Charthandle.setTitle(String title) method.
 
-<figure class="third">
-	<img src="http://placehold.it/600x300.jpg">
-	<img src="http://placehold.it/600x300.jpg">
-	<img src="http://placehold.it/600x300.jpg">
-	<figcaption>Three images.</figcaption>
-</figure>
+```java
+performancechart.setChartTitle('Athletic Performance Results');
+```
 
-### Alternative way
+To change the axis labels, or other text labels in the chart use the ChartHandle.changeTextValue(String originaltext, String newtext) method.
 
-Another way to achieve the same result is to include `gallery` Liquid template. In this case you
-don't have to write any HTML tags – just copy a small block of code, adjust the parameters (see below)
-and fill the block with any number of links to images. You can mix relative and external links.
+```java
+if(ct.changeTextValue('50 Meter Dash Times", "High Jump    Distance')){
+System.out.println('Successfully Changed Categories Label');
+}
+```
 
-Here is the block you might want to use:
+To copy a chart into another sheet or workbook, use
 
-{% highlight liquid %}
-{% raw %}
-{% capture images %}
-	http://placehold.it/600x300.jpg
-	http://placehold.it/600x300.jpg
-	http://placehold.it/600x300.jpg
-{% endcapture %}
-{% include gallery images=images caption="Test images" cols=3 %}
-{% endraw %}
-{% endhighlight %}
-
-Parameters:
-
-- `caption`: Sets the caption under the gallery (see `figcaption` HTML tag above);
-- `cols`: Sets the number of columns of the gallery.
-Available values: [1..3].
-
-It will look something like this:
-
-{% capture images %}
-	http://placehold.it/600x300.jpg
-	http://placehold.it/600x300.jpg
-	http://placehold.it/600x300.jpg
-{% endcapture %}
-{% include gallery images=images caption="Test images" cols=3 %}
+```java
+book.copyChartToSheet("New Chart Title", "Sheet3");
+```
