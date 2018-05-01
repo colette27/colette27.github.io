@@ -8,6 +8,8 @@ tags:
   - syntax highlighting
 ---
 
+## Worksheet Functions
+
 The WorkSheetHandle provides a handle to a worksheet within an XLS file, and includes convenience methods for working with the cell values within a sheet. The WorkSheetHandle allows access to a particular worksheet within your WorkBookHandle.
 
 
@@ -20,6 +22,12 @@ To gain access to the handle, use the getWorkSheet(String sheetName) method with
 ```java
 WorkBook mybook = new WorkBook();
 ```
+
+You can get an array of handles to all of the worksheets in a workbook by using the getWorkSheets() method:
+
+```java
+WorkBook mybook = new WorkBook();
+WorkSheetHandle sheet = mybook.getWorkSheet(Sheet1);
 
 ```css
 #container {
