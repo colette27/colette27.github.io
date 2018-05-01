@@ -63,7 +63,7 @@ Indentation matters. Be sure the indent of the code block aligns with the first 
 1. Do step 1.
 2. Now do this:
 
-   ```Java
+   ```java
    WorkBook mybook = new WorkBook();
    ```
 
