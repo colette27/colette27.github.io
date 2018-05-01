@@ -12,73 +12,93 @@ tags:
 
 The WorkSheetHandle provides a handle to a worksheet within an XLS file, and includes convenience methods for working with the cell values within a sheet. The WorkSheetHandle allows access to a particular worksheet within your WorkBookHandle.
 
-
-[^1]: <http://en.wikipedia.org/wiki/Syntax_highlighting>
-
 ### Instantiating the WorksheetHandle
 
 To gain access to the handle, use the getWorkSheet(String sheetName) method within the WorkBookHandle object:
 
 ```java
 WorkBook mybook = new WorkBook();
+WorkSheetHandle sheet = mybook.getWorkSheet(Sheet1);
 ```
 
 You can get an array of handles to all of the worksheets in a workbook by using the getWorkSheets() method:
 
 ```java
-WorkBook mybook = new WorkBook();
-WorkSheetHandle sheet = mybook.getWorkSheet(Sheet1);
+WorkSheetHandle[] sheets = book.getWorkSheets();
 ```
 
-```css
-#container {
-  float: left;
-  margin: 0 -240px 0 0;
-  width: 100%;
-}
+This will return an array of handles to all of the worksheets in a workbook, giving flexibility to work with each one individually.
+
+### Creating, Copying, and Deleting Worksheets
+
+To create a new worksheet, use the createWorkSheet(String newSheet) method. This will insert a new worksheet and place it at the end of the workbook.
+
+```java
+createWorkSheet('mysheet');
+WorkSheetHandle mysheet = new WorkSheet();
 ```
 
-```html
-{% raw %}<nav class="pagination" role="navigation">
-  {% if page.previous %}
-    <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}">Previous article</a>
-  {% endif %}
-  {% if page.next %}
-    <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">Next article</a>
-  {% endif %}
-</nav><!-- /.pagination -->{% endraw %}
+To delete any number of worksheets, use the remove method. To delete all worksheets in a workbook, use the removeAllWorkSheets() method.
+
+```java
+sheet.remove('mysheet');
+sheet.removeAllWorkSheets('mybook');
 ```
 
-```ruby
-module Jekyll
-  class TagIndex < Page
-    def initialize(site, base, dir, tag)
-      @site = site
-      @base = base
-      @dir = dir
-      @name = 'index.html'
-      self.process(@name)
-      self.read_yaml(File.join(base, '_layouts'), 'tag_index.html')
-      self.data['tag'] = tag
-      tag_title_prefix = site.config['tag_title_prefix'] || 'Tagged: '
-      tag_title_suffix = site.config['tag_title_suffix'] || '&#8211;'
-      self.data['title'] = "#{tag_title_prefix}#{tag}"
-      self.data['description'] = "An archive of posts tagged #{tag}."
-    end
-  end
-end
+To copy an existing worksheet to your workbook, use the copyWorkSheet(String SourceSheetName NewSheetName) method. This will duplicate a worksheet in the workbook and add it to the end of the workbook with a new name.
+
+```java
+WorkBook thisbook = new WorkBook(); WorkSheetHandle sheet = thisbook.getWorkSheet(sheet1);
+createWorkSheet('newsheet');
+copyWorkSheet('WorkSheet1', 'WorkSheet4');
 ```
 
-### Code Blocks in Lists
+### Editing Sheet Names
 
-Indentation matters. Be sure the indent of the code block aligns with the first non-space character after the list item marker (e.g., `1.`). Usually this will mean indenting 3 spaces instead of 4.
+The setSheetName(String newName) method can be used to modify or rename your worksheet.
+This method will change the name on the worksheet’s tab as well as all programmatic and internal references to that name.
 
-1. Do step 1.
-2. Now do this:
-3. Now you can do this.
+```java
+setSheetName('sheet1', 'Records');
+```
 
-### GitHub Gist Embed
+### Getting, Setting and Reordering Tabs
 
-An example of a Gist embed below.
+Sheet tab names can be set and retrieved. To get the name of a worksheet, use the getSheetName() method.
 
-{% gist e813c2560b0f1ecc9f5d pacman.patch %}
+```java
+String sheetname = mysheet.getSheetName();
+```
+
+To set the tab name, use the WorkSheetHandle.setSheetName(String NewName) method.
+
+```java
+mysheet.setSheetName('CreditTracking');
+```
+
+Sheets can be selected so they appear as the first visible sheet when the output file is opened. You can also reorder sheets to your specifications. To select a worksheet and set it to the first visible tab in the workbook use the setFirstVisibleTab(int x) method.
+
+```java
+WorkSheetHandle WorkSheet4 = new WorkSheet();
+setTabIndex('0', 'WorkSheet4');
+```
+
+To reorder the display of the worksheet tabs, use the setTabIndex(int idx) method. This is a zero-based index. Thus, the first tab you will see displayed in your WorkBook will be 0.
+
+```java
+setTabIndex('1','WorkSheet1');
+```
+
+### Protect and Unprotect Worksheets
+
+Worksheet protection can be set or removed to control any modifications in the output file. To lock the values of a worksheet, you can set the worksheet to “protect,” by using the setProtected(boolean b) method
+
+```java
+mysheet.setProtected(true);
+```
+
+To unlock protected worksheets, use the setProtected(boolean b) method.
+
+```java
+mysheet.setProtected(false)
+```
