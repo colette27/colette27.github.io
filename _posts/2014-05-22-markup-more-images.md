@@ -44,7 +44,7 @@ System.out.println('Successfully Changed Categories Label');
 }
 ```
 
-To copy a chart into another sheet or workbook, use
+To copy a chart into another sheet or workbook, use:
 
 ```java
 book.copyChartToSheet("New Chart Title", "Sheet3");
