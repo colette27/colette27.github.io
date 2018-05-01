@@ -28,6 +28,7 @@ You can get an array of handles to all of the worksheets in a workbook by using 
 ```java
 WorkBook mybook = new WorkBook();
 WorkSheetHandle sheet = mybook.getWorkSheet(Sheet1);
+```
 
 ```css
 #container {
