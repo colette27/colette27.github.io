@@ -17,6 +17,10 @@ The WorkSheetHandle provides a handle to a worksheet within an XLS file, and inc
 
 To gain access to the handle, use the getWorkSheet(String sheetName) method within the WorkBookHandle object:
 
+```java
+WorkBook mybook = new WorkBook();
+```
+
 ```css
 #container {
   float: left;
@@ -62,11 +66,6 @@ Indentation matters. Be sure the indent of the code block aligns with the first 
 
 1. Do step 1.
 2. Now do this:
-
-   ```java
-   WorkBook mybook = new WorkBook();
-   ```
-
 3. Now you can do this.
 
 ### GitHub Gist Embed
