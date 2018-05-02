@@ -5,7 +5,7 @@ excerpt: "This section documents the WorkSheetHandle of the API.
 "
 tags:
   - code
-  - syntax highlighting
+  - Java Spreadsheet
 ---
 
 ## Worksheet Functions
