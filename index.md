@@ -1,6 +1,7 @@
 ---
 layout: home
 ---
-# About Theme
+# Portfolio
 
-Colette Turbeville Portfolio of Selected Works
+Documentations engineer, technical communicator, and web designer/developer,
+specializing in enterprise API documentation.
