@@ -37,6 +37,7 @@ Before you begin, you need the following system requirements:
 sudo cat /Users/Shared/Jenkins/Home/secrets/initialAdminPassword
 ````
 5. Return to the Jenkins browser window, enter the password and log in.
+
 *You have now installed Jenkins.*
 
 ## Creating a CI Pipeline
