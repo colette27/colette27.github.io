@@ -1,7 +1,6 @@
 ---
 layout: post-list
 title: Posts
-description: "List of recent posts"
+description: "List of recent post"
 permalink: /posts.html
-
 ---
