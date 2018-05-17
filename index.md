@@ -3,5 +3,5 @@ layout: home
 ---
 # Portfolio
 
-Documentations engineer, technical communicator, and web designer/developer,
-specializing in enterprise API documentation.
+Documentation engineer, technical communicator, web designer/developer,
+specializing in REST API documentation.
