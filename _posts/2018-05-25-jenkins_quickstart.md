@@ -58,6 +58,7 @@ pipeline {
     }
 }
 ````
+
 8. Open Jenkins and choose create a new file
 *This will be your new CI pipleline*
 9. Name your new pipeline
