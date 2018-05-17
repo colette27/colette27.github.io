@@ -71,3 +71,5 @@ pipeline {
 You have now created a CI pipeline in Jenkins.
 
  Now that you are familiar with some of the basic CI functionality using in Jenkins, You can start creating more complex pipelines by building [Java applications with Maven.](https://java.com/en/download/)
+
+ X
