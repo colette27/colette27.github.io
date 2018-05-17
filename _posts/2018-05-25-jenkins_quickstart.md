@@ -19,7 +19,7 @@ Before you begin, you need the following system requirements:
 
 ##Storage
 
-512MB available
+512MB available\
 20 GB of drive space
 
 [Java 8, JRE or JDK](https://java.com/en/download/)
