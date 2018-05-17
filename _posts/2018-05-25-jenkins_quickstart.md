@@ -33,12 +33,10 @@ Before you begin, you need the following system requirements:
 2.  Double click the installer to launch the Jenkins Install Wizard
 3.  When the installation is complete, a local instance of Jenkins is launched. Your browser window will open to this locally running Jenkins instance, where you are prompted to log in to complete the installation.
 4. Before you log in, retrieve the password set by Jenkins during the install. To get your password, open a terminal and type:
-
 ````cl
 sudo cat /Users/Shared/Jenkins/Home/secrets/initialAdminPassword
 ````
-
-5. Return to the Jenkins browser window, enter the password and log in. 
+5. Return to the Jenkins browser window, enter the password and log in.
 
 You have now installed Jenkins.
 
