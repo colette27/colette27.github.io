@@ -10,6 +10,7 @@ tag:
 - CI
 - installation
 ---
+View page MD source 
 
 # Jenkins Quickstart Guide for Java Developers  
 
