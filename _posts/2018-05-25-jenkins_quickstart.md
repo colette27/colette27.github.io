@@ -39,6 +39,10 @@ sudo cat /Users/Shared/Jenkins/Home/secrets/initialAdminPassword
 ````
 *This will return your password*
 
+5. Return to the Jenkins browser window, enter the password and log in. 
+
+You have now installed Jenkins.
+
 ## Creating a CI Pipeline
 
 1. Open a browser, go to http://localhost:8080/ and log in with your password.
