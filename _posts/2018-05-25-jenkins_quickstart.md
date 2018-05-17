@@ -37,7 +37,6 @@ Before you begin, you need the following system requirements:
 ````cl
 sudo cat /Users/Shared/Jenkins/Home/secrets/initialAdminPassword
 ````
-
 5. Return to the Jenkins browser window, enter the password and log in.
 
 You have now installed Jenkins.
@@ -47,7 +46,7 @@ You have now installed Jenkins.
 1. Open a browser, go to http://localhost:8080/ and log in with your password.
 2. Create a new file, name it Jenkinsfile and insert the following:
 
-````JavaScript
+````Java
 Jenkinsfile (Declarative Pipeline)
 pipeline {
     agent { docker { image 'maven:3.3.3' } }
