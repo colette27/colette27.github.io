@@ -44,7 +44,7 @@ You have now installed Jenkins.
 
 1. Open a browser, go to http://localhost:8080/ and log in with your password.
 2. Create a new file, name it Jenkinsfile and insert the following:
-````Java
+````cl
 Jenkinsfile (Declarative Pipeline)
 pipeline {
     agent { docker { image 'maven:3.3.3' } }
