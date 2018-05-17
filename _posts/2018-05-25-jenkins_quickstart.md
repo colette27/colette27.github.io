@@ -2,7 +2,7 @@
 layout: post
 title:  "Jenkins Quickstart Guide for Java Developers"
 date:   2018-05-17
-excerpt: "Stylish, two-column Jekyll theme for your blog."
+excerpt: "Intended to get you quickly up and running with Jenkins, while using some of its continuous integration capabilities"
 tag:
 - jekyll
 - halve
@@ -11,17 +11,17 @@ tag:
 - theme
 - vangelis
 ---
-# Jenkins Quickstart Guide for Java Developers   [![Donate](https://img.shields.io/badge/paypal-donate-blue.svg)](https://www.paypal.me/taylantatli/0usd)
+# Jenkins Quickstart Guide for Java Developers   
 
-Jenkins is an open-source continuous integration server written in Java. This guide is intended to get you quickly up and running with Jenkins while using some of its continuous integration capabilities.
+Jenkins is an open-source continuous integration server written in Java. This guide is intended to get you quickly up and running with Jenkins, while using some of its continuous integration capabilities.
 
 Before you begin, you need the following system requirements:
 
-**Storage**
-512MB  of storage
+##Storage
+
+512MB available
 20 GB of drive space
-iromet
- **Software**
+
 [Java 8, JRE or JDK](https://java.com/en/download/)
 [Docker](https://store.docker.com)
 
