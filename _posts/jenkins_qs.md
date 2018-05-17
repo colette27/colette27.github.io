@@ -53,4 +53,5 @@ pipeline {
 11. Select *Add source,* choose the repository with the new Jenkinsfile
 12. Click save
 Now you have created your CI pipeline.
-For more informaton on creating CI pipleines To create Java applications see **Build a Java app with Maven** 
+For more informaton on creating CI pipleines To create Java applications see
+**Build a Java app with Maven**
