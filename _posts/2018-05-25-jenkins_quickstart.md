@@ -19,29 +19,31 @@ Before you begin, you need the following system requirements:
 
 **Storage**
 
-512MB available
-20 GB of drive space
+- 512MB available
+- 20 GB of free drive space
 
 **Applications**
 
-[Java 8, JRE or JDK](https://java.com/en/download/)
-[Docker](https://store.docker.com)
+- [Java 8, JRE or JDK](https://java.com/en/download/)
+- [Docker](https://store.docker.com)
 
 ## Install Jenkins
 
 1.  Start by downloading Jenkins at: https://jenkins.io/download/ and choose the installation package that works with your environment.
 2.  Double click the installer to launch the Jenkins Install Wizard
 3.  When the installation is complete, a local instance of Jenkins is launched. Your browser window will open to this locally running Jenkins instance, where you are prompted to log in to complete the installation.
-4. Before you log in, retrieve the password set by Jenkins. To get your password, open a terminal and type:
+4. Before you log in, retrieve the password set by Jenkins during the install. To get your password, open a terminal and type:
 
 ````cl
 sudo cat /Users/Shared/Jenkins/Home/secrets/initialAdminPassword
 ````
-This will return your password
+*This will return your password*
 
 ## Creating a CI Pipeline
+
 1. Open a browser, go to http://localhost:8080/ and log in with your password.
 2. Create a new file, name it Jenkinsfile and insert the following:
+
 ````JavaScript
 Jenkinsfile (Declarative Pipeline)
 pipeline {
@@ -65,4 +67,4 @@ pipeline {
 
 You have now created a CI pipeline in Jenkins.
 
- Now that you are familiar with some of the basic CI functionality using in Jenkins, You can start building more complex pipelines by building [Java applications with Maven.](https://java.com/en/download/)
+ Now that you are familiar with some of the basic CI functionality using in Jenkins, You can start creating more complex pipelines by building [Java applications with Maven.](https://java.com/en/download/)
