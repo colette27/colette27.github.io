@@ -37,7 +37,6 @@ Before you begin, you need the following system requirements:
 ````cl
 sudo cat /Users/Shared/Jenkins/Home/secrets/initialAdminPassword
 ````
-This will return your password.
 5. Copy the password
 6. Return to the Jenkins browser window, enter your password and log in.
 
