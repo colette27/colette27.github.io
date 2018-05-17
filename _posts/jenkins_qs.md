@@ -1,15 +1,6 @@
 ---
 layout: post
 title: "Jenkins Quickstart Guide for Java Developers"
-date:   2016-05-29
-excerpt: "."
-tag:
-- jekyll
-- halve
-- blog
-- vangeltzo
-- theme
-- vangelis
 ---
 # Jenkins Quickstart Guide for Java Developers   [![Donate](https://img.shields.io/badge/paypal-donate-blue.svg)](https://www.paypal.me/taylantatli/0usd)
 
@@ -62,4 +53,5 @@ pipeline {
 11. Select *Add source,* choose the repository with the new Jenkinsfile
 12. Click save
 Now you have created your CI pipeline.
-For more informaton on creating CI pipleines To create Java applications see **Build a Java app with Maven** 
+For more informaton on creating CI pipleines To create Java applications see
+**Build a Java app with Maven**
