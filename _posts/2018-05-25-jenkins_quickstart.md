@@ -31,16 +31,13 @@ Before you begin, you need the following system requirements:
 
 1.  Start by downloading Jenkins at: https://jenkins.io/download/ and choose the installation package that works with your environment.
 2.  Double click the installer to launch the Jenkins Install Wizard
-3.  When the installation is complete, a local instance of Jenkins is launched.
-
-Your browser window will open to this locally running Jenkins instance, where you are prompted to log in to complete the installation.
-
-4. In order log in you will need to retrieve the password set by Jenkins. To get your password, open a terminal and type:
+3.  When the installation is complete, a local instance of Jenkins is launched. Your browser window will open to this locally running Jenkins instance, where you are prompted to log in to complete the installation.
+4. Before you log in, retrieve the password set by Jenkins. To get your password, open a terminal and type:
 
 ````cl
 sudo cat /Users/Shared/Jenkins/Home/secrets/initialAdminPassword
 ````
-This will return the password string you need to log into Jenkins
+This will return your password
 
 ## Creating a CI Pipeline
 1. Open a browser, go to http://localhost:8080/ and log in with your password.
