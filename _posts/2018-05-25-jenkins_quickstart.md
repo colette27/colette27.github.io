@@ -10,7 +10,7 @@ tag:
 - CI
 - installation
 ---
-View page MD source 
+[View page MD source](https://github.com/colette27/colette27.github.io/blob/master/_posts/2018-05-25-jenkins_quickstart.md)
 
 # Jenkins Quickstart Guide for Java Developers  
 
