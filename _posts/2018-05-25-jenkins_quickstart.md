@@ -41,7 +41,7 @@ This will return your password.
 5. Copy the password
 6. Return to the Jenkins browser window, enter your password and log in.
 
-You now have Jenkins installed and running
+**You now have Jenkins installed and running**
 
 ## Creating a CI Pipeline
 
@@ -60,12 +60,11 @@ pipeline {
     }
 }
 ````
-This will be your new CI pipleline.
-3. Give your pipleline a name
+3. This will be your new CI pipleline, give your pipleline a name.
 4. Select *Multibranch Pipeline*
 5. Next, select *Add source,* and choose the repository with the new Jenkinsfile you just created.
-6. Click *save*
+6. Click *Save*
 
-You have created a new a CI pipeline in Jenkins.
+**You have created a new a CI pipeline in Jenkins.**
 
 Now that you are familiar with some of the basic CI functionality using in Jenkins, you can start creating more complex pipelines by building [Java applications with Maven.](https://java.com/en/download/)
