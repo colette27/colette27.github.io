@@ -11,9 +11,9 @@ tag:
 - theme
 - vangelis
 ---
-# Jenkins Quickstart Guide for Java Developers   
+# Jenkins Quickstart Guide for Java Developers  
 
-Jenkins is an open source continuous integration server written in Java. This guide is intended to get you quickly up and running with Jenkins, while using some of its continuous integration capabilities.
+Jenkins is an open source continuous integration server written in Java. This guide is intended to get you quickly up and running with Jenkins, while using some of its continuous integration (CI) capabilities.
 
 Before you begin, you need the following system requirements:
 
