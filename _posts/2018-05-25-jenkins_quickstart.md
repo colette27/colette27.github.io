@@ -17,7 +17,7 @@ Jenkins is an open source continuous integration server written in Java. This gu
 
 Before you begin, you need the following system requirements:
 
-##Storage
+## Storage
 
 512MB available\
 20 GB of drive space
@@ -25,7 +25,7 @@ Before you begin, you need the following system requirements:
 [Java 8, JRE or JDK](https://java.com/en/download/)
 [Docker](https://store.docker.com)
 
-##Install Jenkins
+## Install Jenkins
 
 1.  To download Jenkins, go to: https://jenkins.io/download/ choose the installation package that works with your enviroment.
 2.  Double click the installer to launch it—this launches the Install Wizard.
