@@ -33,7 +33,6 @@ Before you begin, you need the following system requirements:
 2.  Double click the installer to launch the Jenkins Install Wizard
 3.  When the installation is complete, a local instance of Jenkins is launched. Your browser window will open to this locally running Jenkins instance, where you are prompted to log in to complete the installation.
 4. Before you log in, retrieve the password set by Jenkins during the install. To get your password, open a terminal and type:
-
 ````cl
 sudo cat /Users/Shared/Jenkins/Home/secrets/initialAdminPassword
 ````
@@ -45,7 +44,6 @@ You have now installed Jenkins.
 
 1. Open a browser, go to http://localhost:8080/ and log in with your password.
 2. Create a new file, name it Jenkinsfile and insert the following:
-
 ````Java
 Jenkinsfile (Declarative Pipeline)
 pipeline {
@@ -59,7 +57,6 @@ pipeline {
     }
 }
 ````
-
 8. Open Jenkins and choose create a new file
 *This will be your new CI pipleline*
 9. Name your new pipeline
