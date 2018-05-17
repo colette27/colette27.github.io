@@ -1,6 +1,15 @@
 ---
 layout: post
-title: "Jenkins Quickstart Guide for Java Developers"
+title:  "Jenkins Quickstart Guide for Java Developers"
+date:   2018-05-17
+excerpt: "Stylish, two-column Jekyll theme for your blog."
+tag:
+- jekyll
+- halve
+- blog
+- vangeltzo
+- theme
+- vangelis
 ---
 # Jenkins Quickstart Guide for Java Developers   [![Donate](https://img.shields.io/badge/paypal-donate-blue.svg)](https://www.paypal.me/taylantatli/0usd)
 
