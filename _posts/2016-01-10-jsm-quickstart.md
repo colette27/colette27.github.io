@@ -6,8 +6,9 @@ tags:
   - Quickstart
   - readability
   - Java API
-{::options parse_block_html="true" /}
 ---
+
+{::options parse_block_html="true" /}
 
 This project was for a Java spreadsheet tools company.
 
