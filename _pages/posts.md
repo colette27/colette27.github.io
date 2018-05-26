@@ -5,7 +5,4 @@ description: "List of recent post"
 permalink: /posts.html
 
 
-
-
-
 ---

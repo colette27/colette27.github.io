@@ -6,9 +6,10 @@ tags:
   - Quickstart
   - readability
   - Java API
+{::options parse_block_html="true" /}
 ---
 
-This project was for a spreadsheet Java tools company.
+This project was for a Java spreadsheet tools company.
 
 
 ## ExtenXLS Quick Start Guide
