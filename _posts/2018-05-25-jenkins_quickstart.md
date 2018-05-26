@@ -61,7 +61,7 @@ pipeline {
 ````
 3. This will be your new CI pipleline, give your pipleline a name.
 4. Select *Multibranch Pipeline*
-5. Next, select *Add source,* and choose the repository with the new Jenkinsfile you just created.
+5. Next, select *Add source* and choose the repository with the new Jenkinsfile you just created.
 6. Click *Save*
 
 **You have created a new a CI pipeline in Jenkins.**
