@@ -11,6 +11,16 @@ tags:
 
 {::options parse_block_html="true" /}
 
+<div class="panel panel-info">
+**Note**
+{: .panel-heading}
+<div class="panel-body">
+
+NOTE DESCRIPTION
+
+</div>
+</div>
+
 This project was for a Java spreadsheet tools company.
 
 
