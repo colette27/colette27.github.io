@@ -20,6 +20,8 @@ NOTE DESCRIPTION
 
 </div>
 </div>
+My important paragraph.
+{: .alert .alert-info}
 
 This project was for a Java spreadsheet tools company.
 
