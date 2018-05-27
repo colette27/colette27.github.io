@@ -7,6 +7,7 @@ tags:
   - readability
   - Java API
 
+
 ---
 
 {::options parse_block_html="true" /}
@@ -39,7 +40,7 @@ ExtenXLS is a Java spreadsheet library designed for developers familiar with the
 ````
 Note: Review the WorkBookHandle constructors in the API documentation
 
-to see which WorkBookHandle is appropriate for your application.
+      to see which WorkBookHandle is appropriate for your application.
 ````
 4. Start working with a worksheet by using the `WorkBookHandle.getWorkSheet(String sheetname)` method.
 5. Make sure to catch the WorkSheetNotFoundException in case the expected sheet does not already exist in the file.
