@@ -35,9 +35,9 @@ ExtenXLS is a Java spreadsheet library designed for developers familiar with the
 1. Copy ExtenXLS.jar and extenxls.lic to a project directory. Make sure that the jar is in the classpath of your project. The ExtenXLS.jar file  needs to be on your classpath in order for the JVM to find the ExtenXLS class files.
 2. In your Java code, import the com.extentech.ExtenXLS package.
 3. Create a new WorkBookHandle, this can be a new, empty workbook with three sheets, or you can parse an existing XLS file in the form of a byte array or from another data source.
+
 ````
 Review the WorkBookHandle constructors in the API documentation to see which WorkBookHandle is appropriate for your application.
-
 ````
 4. Start working with a worksheet by using the `WorkBookHandle.getWorkSheet(String sheetname)` method.
 5. Make sure to catch the WorkSheetNotFoundException in case the expected sheet does not already exist in the file.
