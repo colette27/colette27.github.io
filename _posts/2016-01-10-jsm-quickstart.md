@@ -29,7 +29,7 @@ Note: Review the WorkBookHandle constructors in the API documentation
       to see which WorkBookHandle is appropriate for your application.
 ````
 4. Start working with a worksheet by using the `WorkBookHandle.getWorkSheet(String sheetname)` method.
-5. Make sure to catch the WorkSheetNotFoundException in case the expected sheet does not already exist in the file.
+5. Make sure to catch the `WorkSheetNotFoundException` in case the expected sheet does not already exist in the file.
 6. Access the cell values using the `WorkSheetHandle.getCell(Sheetname:CellAddress)` method
 7. Add new cells to the spreadsheet with the `CellHandle WorkSheetHandle.add(Object ob, String address)` method.
 8. Set and get the value of cells by using the `CellHandle.setCellVal(Object ob)` and object `CellHandle.getCellVal()` methods.
