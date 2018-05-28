@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-05-17T15:17:42-07:00</updated><id>/</id><title>Colette Turbeville</title><subtitle>Portfolio of Works</subtitle><entry><title>Jenkins Quickstart Guide for Java Developers</title><link href="/jenkins_quickstart/" rel="alternate" type="text/html" title="Jenkins Quickstart Guide for Java Developers" /><published>2018-05-17T00:00:00-07:00</published><updated>2018-05-17T00:00:00-07:00</updated><id>/jenkins_quickstart</id><content type="html" xml:base="/jenkins_quickstart/">&lt;p&gt;&lt;a href=&quot;https://github.com/colette27/colette27.github.io/blob/master/_posts/2018-05-25-jenkins_quickstart.md&quot;&gt;View page MD&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;jenkins-quickstart-guide-for-java-developers&quot;&gt;Jenkins Quickstart Guide for Java Developers&lt;/h1&gt;
+
+&lt;p&gt;Jenkins is an open source continuous integration server written in Java. This guide is intended to get you quickly up and running with Jenkins, while using some of its continuous integration (CI) capabilities.&lt;/p&gt;
+
+&lt;p&gt;Before you begin, you need the following system requirements:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Storage&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;512MB available&lt;/li&gt;
+  &lt;li&gt;20 GB of drive space&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Applications&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://java.com/en/download/&quot;&gt;Java 8, JRE or JDK&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://store.docker.com&quot;&gt;Docker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;install-jenkins&quot;&gt;Install Jenkins&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Download &lt;a href=&quot;https://jenkins.io/download/&quot;&gt;Jenkins&lt;/a&gt;, choose the installation package that works with your environment.&lt;/li&gt;
+  &lt;li&gt;Double click the installer to launch the Jenkins install wizard, this will take you through the installation process.&lt;/li&gt;
+  &lt;li&gt;When the installation is complete, a local instance of Jenkins is launched. Your browser window will open to this locally running instance, where you are prompted to log in to complete the installation.&lt;/li&gt;
+  &lt;li&gt;Before you log in, you need to get the password set by Jenkins during the install. To get your password, open a terminal and type:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;cl
+sudo cat /Users/Shared/Jenkins/Home/secrets/initialAdminPassword
+&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Copy the password&lt;/li&gt;
+  &lt;li&gt;Return to the Jenkins browser window, enter your password and log in.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;You now have Jenkins installed and running&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;creating-a-ci-pipeline&quot;&gt;Creating a CI Pipeline&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;In the Jenkins control panel, create a new file and name it &lt;em&gt;Jenkinsfile.&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Insert the following code into the Jenkinsfile:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;cl
+Jenkinsfile (Declarative Pipeline)
+pipeline {
+ agent { docker { image &#39;maven:3.3.3&#39; } }
+ stages {
+     stage(&#39;build&#39;) {
+         steps {
+             sh &#39;mvn --version&#39;
+         }
+     }
+ }
+}
+&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;This will be your new CI pipleline, give your pipleline a name.&lt;/li&gt;
+  &lt;li&gt;Select &lt;em&gt;Multibranch Pipeline&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Next, select &lt;em&gt;Add source&lt;/em&gt; and choose the repository with the new Jenkinsfile you just created.&lt;/li&gt;
+  &lt;li&gt;Click &lt;em&gt;Save&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;You have created a new a CI pipeline in Jenkins.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that you are familiar with some of the basic CI functionality using in Jenkins, you can start creating more complex pipelines by building &lt;a href=&quot;https://java.com/en/download/&quot;&gt;Java applications with Maven.&lt;/a&gt;&lt;/p&gt;</content><category term="java" /><category term="blog" /><category term="jenkins" /><category term="CI" /><category term="installation" /><summary>Intended to get you quickly up and running with Jenkins, while using some of its continuous integration capabilities</summary></entry><entry><title>Quick Start Guide</title><link href="/jsm-quickstart/" rel="alternate" type="text/html" title="Quick Start Guide" /><published>2016-01-10T00:00:00-08:00</published><updated>2016-01-10T00:00:00-08:00</updated><id>/jsm-quickstart</id><content type="html" xml:base="/jsm-quickstart/">&lt;p&gt;This project was for a Java middleware company.&lt;/p&gt;
+
+&lt;h2 id=&quot;extenxls-quick-start-guide&quot;&gt;ExtenXLS Quick Start Guide&lt;/h2&gt;
+
+&lt;p&gt;ExtenXLS is a Java spreadsheet library designed for developers familiar with the Java syntax, spreadsheet programs, and the concept of file templates. This Guide is intended to get you started quickly programming with ExtenXLS.&lt;/p&gt;
+
+&lt;h3 id=&quot;basic-use-of-the-api-requires-the-following-steps&quot;&gt;Basic use of the API requires the following steps:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Copy ExtenXLS.jar and extenxls.lic to a project directory. Make sure that the jar is in the classpath of your project. The ExtenXLS.jar file  needs to be on your classpath in order for the JVM to find the ExtenXLS class files.&lt;/li&gt;
+  &lt;li&gt;In your Java code, import the com.extentech.ExtenXLS package.&lt;/li&gt;
+  &lt;li&gt;Create a new WorkBookHandle, this can be a new, empty workbook with three sheets, or you can parse an existing XLS file in the form of a byte array or from another data source. Review the WorkBookHandle constructors in the API documentation to see which WorkBookHandle is appropriate for your application.&lt;/li&gt;
+  &lt;li&gt;Start working with a worksheet by using the WorkBookHandle.getWorkSheet(String sheetname) method.&lt;/li&gt;
+  &lt;li&gt;Make sure to catch the WorkSheetNotFoundException in case the expected sheet does not already exist in the file.&lt;/li&gt;
+  &lt;li&gt;Access the cell values using the WorkSheetHandle.getCell(Sheetname:CellAddress) method&lt;/li&gt;
+  &lt;li&gt;Add new cells to the spreadsheet with the CellHandle WorkSheetHandle.add(Object ob, String address) method.&lt;/li&gt;
+  &lt;li&gt;Set and get the value of cells by using the CellHandle.setCellVal(Object ob) and object CellHandle.getCellVal() methods.&lt;/li&gt;
+  &lt;li&gt;Finally, stream the WorkBook bytes to an output file using the WorkBookHandle.getBytes() method. If you are writing to a web application, you can send the bytes over a ServletResponse to a browser, write out to a file, or to any byte array consumer.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="sample post" /><category term="readability" /><category term="test" /><summary>A Simple quick start guide</summary></entry><entry><title>ExtenXLS Working With Charts</title><link href="/jsm-charts/" rel="alternate" type="text/html" title="ExtenXLS Working With Charts" /><published>2016-01-09T00:00:00-08:00</published><updated>2016-01-09T00:00:00-08:00</updated><id>/jsm-charts</id><content type="html" xml:base="/jsm-charts/">&lt;h2 id=&quot;working-with-charts&quot;&gt;Working With Charts&lt;/h2&gt;
+
+&lt;p&gt;With ChartHandle, you can add cells to a chart, change a chart’s title, axis labels, and copy charts between other worksheets and workbooks.&lt;/p&gt;
+
+&lt;p&gt;Begin by retrieving a ChartHandle from an existing chart in a worksheet. To retrieve a ChartHandle, use the ChartHandle WorkSheetHandle.getChart(String chartname) method.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;     &lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;ChartHandle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;performancechart&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mysheet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getChart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Performance&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ChartNotFoundException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;     &lt;/span&gt;   
+  &lt;span class=&quot;c1&quot;&gt;// oops!&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;With a ChartHandle, you can add cells to the chart using the ChartHandle.changeSeriesRange(String originalrange, String newrange) method.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;performancechart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;changeSeriesRange&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sheet1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;C23:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;E23&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sheet1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;C23:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;G23&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)){&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Successfully&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Added&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Columns&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;F&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;G&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Series&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Range&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To change the chart title, use the Charthandle.setTitle(String title) method.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;performancechart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setChartTitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Athletic&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Performance&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Results&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To change the axis labels, or other text labels in the chart use the ChartHandle.changeTextValue(String originaltext, String newtext) method.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ct&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;changeTextValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Meter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Dash&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Times&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;, &quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;High&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Jump&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;Distance&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)){&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Successfully&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Changed&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Categories&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Label&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To copy a chart into another sheet or workbook, use:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;copyChartToSheet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;New Chart Title&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Sheet3&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><category term="Spreadsheet" /><category term="charts" /><category term="test" /><summary>Examples and code for displaying images in posts.</summary></entry><entry><title>Java Spreadsheet User Guide &amp;amp; Manual</title><link href="/java-spreadsheet-manual/" rel="alternate" type="text/html" title="Java Spreadsheet User Guide &amp; Manual " /><published>2015-08-16T00:00:00-07:00</published><updated>2015-08-16T00:00:00-07:00</updated><id>/java-spreadsheet-manual</id><content type="html" xml:base="/java-spreadsheet-manual/">&lt;h2 id=&quot;worksheet-functions&quot;&gt;Worksheet Functions&lt;/h2&gt;
+
+&lt;p&gt;The WorkSheetHandle provides a handle to a worksheet within an XLS file, and includes convenience methods for working with the cell values within a sheet. The WorkSheetHandle allows access to a particular worksheet within your WorkBookHandle.&lt;/p&gt;
+
+&lt;h3 id=&quot;instantiating-the-worksheethandle&quot;&gt;Instantiating the WorksheetHandle&lt;/h3&gt;
+
+&lt;p&gt;To gain access to the handle, use the getWorkSheet(String sheetName) method within the WorkBookHandle object:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;WorkBook&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mybook&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WorkBook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;WorkSheetHandle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sheet&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mybook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getWorkSheet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sheet1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You can get an array of handles to all of the worksheets in a workbook by using the getWorkSheets() method:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;WorkSheetHandle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sheets&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getWorkSheets&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This will return an array of handles to all of the worksheets in a workbook, giving flexibility to work with each one individually.&lt;/p&gt;
+
+&lt;h3 id=&quot;creating-copying-and-deleting-worksheets&quot;&gt;Creating, Copying, and Deleting Worksheets&lt;/h3&gt;
+
+&lt;p&gt;To create a new worksheet, use the createWorkSheet(String newSheet) method. This will insert a new worksheet and place it at the end of the workbook.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;createWorkSheet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mysheet&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;WorkSheetHandle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mysheet&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WorkSheet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To delete any number of worksheets, use the remove method. To delete all worksheets in a workbook, use the removeAllWorkSheets() method.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sheet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mysheet&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sheet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;removeAllWorkSheets&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mybook&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To copy an existing worksheet to your workbook, use the copyWorkSheet(String SourceSheetName NewSheetName) method. This will duplicate a worksheet in the workbook and add it to the end of the workbook with a new name.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;WorkBook&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;thisbook&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WorkBook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WorkSheetHandle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sheet&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;thisbook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getWorkSheet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sheet1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;createWorkSheet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;newsheet&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;copyWorkSheet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WorkSheet1&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WorkSheet4&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;editing-sheet-names&quot;&gt;Editing Sheet Names&lt;/h3&gt;
+
+&lt;p&gt;The setSheetName(String newName) method can be used to modify or rename your worksheet.
+This method will change the name on the worksheet’s tab as well as all programmatic and internal references to that name.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;setSheetName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sheet1&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Records&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;getting-setting-and-reordering-tabs&quot;&gt;Getting, Setting and Reordering Tabs&lt;/h3&gt;
+
+&lt;p&gt;Sheet tab names can be set and retrieved. To get the name of a worksheet, use the getSheetName() method.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sheetname&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mysheet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getSheetName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To set the tab name, use the WorkSheetHandle.setSheetName(String NewName) method.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;mysheet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setSheetName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CreditTracking&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Sheets can be selected so they appear as the first visible sheet when the output file is opened. You can also reorder sheets to your specifications. To select a worksheet and set it to the first visible tab in the workbook use the setFirstVisibleTab(int x) method.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;WorkSheetHandle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WorkSheet4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WorkSheet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;setTabIndex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;&#39;0&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WorkSheet4&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To reorder the display of the worksheet tabs, use the setTabIndex(int idx) method. This is a zero-based index. Thus, the first tab you will see displayed in your WorkBook will be 0.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;setTabIndex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;&#39;1&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WorkSheet1&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;protect-and-unprotect-worksheets&quot;&gt;Protect and Unprotect Worksheets&lt;/h3&gt;
+
+&lt;p&gt;Worksheet protection can be set or removed to control any modifications in the output file. To lock the values of a worksheet, you can set the worksheet to “protect,” by using the setProtected(boolean b) method&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;mysheet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setProtected&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To unlock protected worksheets, use the setProtected(boolean b) method.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;mysheet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setProtected&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><category term="code" /><category term="Java Spreadsheet" /><summary>This section documents the WorkSheetHandle of the API.</summary></entry></feed>
