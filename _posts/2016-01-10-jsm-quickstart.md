@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Quick Start Guide"
-excerpt: "A Simple quick start guide "
+title: "Quickstart Guide"
+excerpt: "A Simple Quickstart guide "
 tags:
   - Quickstart
-  - readability
+  - Spreadsheet
   - Java API
+  - Reporting
 
 
 ---
